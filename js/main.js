@@ -16,6 +16,9 @@ var cps=coeff_a_cps*coeff_x_cps+coeff_b_cps
 /*
 	pour un jeu 'infini" il faut une relation mathématique
 */
+function update_click(){
+	
+}
 
 function clicker(){
 
@@ -58,6 +61,9 @@ function achat_item(id){
 		tab_ids.push(id);
 		q.push(1);
 	}
+	if(id>0 and if <10) {
+
+	}
 	/*
 	nos items vont de 1 à n
 		il faut créer des plages d'items avec des actions définis : soit agissant sur le cps / soit sur les degats du click
@@ -65,26 +71,12 @@ function achat_item(id){
 			de 1 à 10 : vaut 1/10 de l'id et uniquement pour click
 			de 10 à 20 : vaut 1/100 de l'id pouir click -> item10 donnera un cps de 1.1
 	*/
+	var price = id * 10
+	compteur -= price
+
 	cps += 0.1;
 	setInterval(function(){ update(); }, 1000);
 	
-}
-
-
-$("#cookie").on("click",function(){
-		compteur+=degats_click;
-	$("#cpt").html("<p>"+compteur+" cookies</p>");
-	$("#cpt").append("<p>"+cps+" cookies per second</p>");
-	console.log("+1 au compteur");
-});
-
-function update() {
-	compteur += cps;
-	compteur = Math.round(compteur);
-	
-	$("#cpt").html("<p>"+compteur+" cookies</p>");
-	$("#cpt").append("<p>"+cps+" cookies per second</p>");
-	setInterval(function(){ update(); }, 1000);
 }
 
 $(".item").click(function(){
@@ -102,5 +94,23 @@ $(".item").click(function(){
 
 	*/
 });
+
+$("#cookie").on("click",function(){
+		compteur+=degats_click;
+	$("#cpt").html("<p>"+compteur+" cookies</p>");
+	$("#cpt").append("<p>"+cps+" cookies per second</p>");
+	console.log("+1 au compteur");
+});
+
+function update() {
+	compteur += cps;
+	compteur = Math.round(compteur);
+	
+	$("#cpt").html("<p>"+compteur+" cookies</p>");
+	$("#cpt").append("<p>"+cps+" cookies per second</p>");
+	setInterval(function(){ update(); }, 1000);
+}
+
+
 
 
