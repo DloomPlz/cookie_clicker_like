@@ -112,19 +112,19 @@ textarea {
 
 
 .gauche {
-	
-   
-    
+
+
+
 }
 .milieu{
-	
-    
-    
+
+
+
 }
 .droite{
-	
-   
-    
+
+
+
 }
 
 .achat_hidden{
@@ -145,9 +145,9 @@ textarea {
     height:40%;
 }
 
-#johncena:hover 
+#johncena:hover
 {
-   
+
     -webkit-transform:scale(1.05); /* Safari and Chrome */
     -moz-transform:scale(1.05); /* Firefox */
     -ms-transform:scale(1.05); /* IE 9 */
@@ -163,7 +163,7 @@ textarea {
      transform:scale(.95);
 }
 
-#cpt 
+#cpt
 {
     margin-top: 20%;
 }

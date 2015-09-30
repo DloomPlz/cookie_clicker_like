@@ -46,7 +46,7 @@ function achat_item(id){
 		tab_ids.push(id);
 		q.push(1);
 	}
-	//show_inventaire();
+	show_inventaire();
 	//action de l'item
 	if(id==1){
 		coeff_x_cps += 0.5;
@@ -62,6 +62,16 @@ function achat_item(id){
 	if(id==4){
 	}
 	if(id==5){
+	}
+	if(id==6){
+	}
+	if(id==7){
+	}
+	if(id==8){
+	}
+	if(id==9){
+	}
+	if(id==10){
 	}
 	//update cps ou click
 	update_dps();
@@ -106,7 +116,14 @@ function print_cookies(){
 	$("#cpt").append("<p>"+cps+" cookies per second</p>");
 }
 function show_inventaire(){
-	//$("#inventory").html("<p>"+compteur+" cookies</p>");
-	console.log( $.toJSON(q) );
-	console.log( $.toJSON(tab_ids) );
+	var vPool="";
+        for (i=0; i<q.length; i++) {
+					val=tab_ids[i];
+          vPool += "<tr><td>" + val + "</td>";
+					val=q[i];
+					vPool += "<td>" + val + "</td></tr>";
+        };
+				console.log(vPool);
+  	$('#inventory').html(vPool);
+
 }
