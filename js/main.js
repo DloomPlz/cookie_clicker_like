@@ -1,5 +1,21 @@
 
 //déclaration des variables
+var jeu = {
+ john_cena: 0,
+ click: 1,
+ value: 0,
+ item1: 1,
+ item1_prix: 2000,
+ item2: 1,
+ item2_prix: 10000,
+ item3: 0,
+ item3_prix: 50000,
+ bool_save:1
+ item4: 0,
+ item4_prix: 100000,
+ item5: 0,
+ item5_prix: 5000000,
+};
 var compteur = 0;
 var coeff_a_click =1;
 var coeff_x_click=1;
