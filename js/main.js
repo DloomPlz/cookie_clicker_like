@@ -17,30 +17,17 @@ var jeu = {
  item5_prix: 5000000,
 };
 var compteur = 0;
-var coeff_a_click =1;
-var coeff_x_click=1;
-var degats_click = coeff_a_click*coeff_x_click;
+var degats_click = 1;
 var tab_ids = new Array;
 var q = new Array; //structure à remplacer par tablerau à 2 dimensions
 //equation math pour cps
-var coeff_a_cps = 1;
-var coeff_b_cps = 0;
-var coeff_x_cps = 0;
-var cps=coeff_a_cps*coeff_x_cps+coeff_b_cps
+var cps=0;
 setInterval(function(){ update(); }, 1000);
 //déclaration des 3 fonctions
 /*
 	pour un jeu 'infini" il faut une relation mathématique
 */
 
-function update_click(){
-	degats_click = coeff_a_click*coeff_x_click;
-	console.log("ceci est les degats du click",degats_click);
-}
-function update_dps(){
-	cps=coeff_a_cps*coeff_x_cps+coeff_b_cps;
-	console.log("ceci est les dagats cps",cps);
-}
 function clicker(){
 	compteur += degats_click;
 	console.log("au compteur :", degats_click);
@@ -62,16 +49,15 @@ function achat_item(id){
 		tab_ids.push(id);
 		q.push(1);
 	}
-	//show_inventaire();
+	show_inventaire();
 	//action de l'item
 	if(id==1){
-		coeff_x_cps += 0.5;
+		cps += 0.5;
 		console.log("augmentation de 0.5 au coeff a du cps");
-		coeff_a_click += coeff_a_click;
+		degats_click += degats_click;
 		console.log("on double le coeff du click");
 	}
 	if(id==2){
-		coeff_x_cps+=coeff_x_cps;
 	}
 	if(id==3){
 	}
@@ -79,9 +65,17 @@ function achat_item(id){
 	}
 	if(id==5){
 	}
+	if(id==6){
+	}
+	if(id==7){
+	}
+	if(id==8){
+	}
+	if(id==9){
+	}
+	if(id==10){
+	}
 	//update cps ou click
-	update_dps();
-	update_click();
 	/*
 	nos items vont de 1 à n
 		il faut créer des plages d'items avec des actions définis : soit agissant sur le cps / soit sur les degats du click
@@ -122,7 +116,15 @@ function print_cookies(){
 	$("#cpt").append("<p>"+cps+" cookies per second</p>");
 }
 function show_inventaire(){
-	//$("#inventory").html("<p>"+compteur+" cookies</p>");
-	console.log( $.toJSON(q) );
-	console.log( $.toJSON(tab_ids) );
+	var vPool="";
+        for (i=0; i<q.length; i++) {
+					val=tab_ids[i];
+          vPool += "<tr><td>" + val + "</td>";
+					val=q[i];
+					vPool += "<td>" + val + "</td></tr>";
+        };
+				console.log(vPool);
+  	$('#inventory').html(vPool);
+
 }
+
