@@ -116,7 +116,6 @@ body
 
 }
 
-<<<<<<< HEAD
 .spots {
 	
    margin: none;
@@ -125,14 +124,15 @@ body
 
 .droite li 
 {
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
 .milieu h3 {
 	
     margin-top: 10%;
+}
     
-=======
+
 .gauche {
 
 
@@ -142,27 +142,36 @@ body
 
 
 
->>>>>>> origin/master
+
 }
 .droite{
 
 
 
 }
+#wwe
+{
+  
+}
+
+#ajout
+{
+    display: none;
+}
 
 .hidden_item
 {
-    display:  none;
+    display: none;
 }
 
 .achat_hidden{
     display:  none;
 }
 
-.johncena
+#johncena
 {
-    margin-top: 40%;
-    margin-left: 2%;
+    margin-top:30%;
+    margin-right: 20%;
 
 
 }

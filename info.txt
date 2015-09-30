@@ -1,0 +1,6 @@
+Bouton pour ajouter cookies dynamique
+Compteur de cookies
+Achats avec certains achats disable et apparition dynamique
+Table d'achats au milieu
+Easter egg lors de l'appuie du petit point noir en dessous de la tete de john
+
